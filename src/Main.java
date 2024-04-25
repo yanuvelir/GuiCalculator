@@ -20,11 +20,6 @@ public class Main {
             //System.out.println("Please enter an action +-/* or 'e' for exit");
             action = JOptionPane.showInputDialog("Please enter an action +-/* or 'e' for exit");
 
-            if (action.equals("e")) {
-                System.out.println("Exiting from the calculator");
-                break;
-            }
-
             if (action.equals("/")&& num2==0) {
                 System.out.println("it is impossible to divide by zero");
                 return;
@@ -41,7 +36,6 @@ public class Main {
             String resultDone = "Result is: " + result;
             JOptionPane.showMessageDialog(null, resultDone, "Result!", JOptionPane.PLAIN_MESSAGE);
 
-        }while (true);
-
+        }while (!action.equals("e"));
     }
 }
